@@ -536,8 +536,15 @@
 
     /* Hide icons on mobile to prevent overlap */
     .toggle-slider .moon-icon,
-    .toggle-slider .sun-icon {
+    .toggle-slider .sun-icon,
+    .theme-toggle .moon-icon,
+    .theme-toggle .sun-icon,
+    .theme-toggle i,
+    .toggle-slider i {
         display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        font-size: 0 !important;
     }
 
     /* Language Toggle - smaller on mobile */
