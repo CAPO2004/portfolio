@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Egyptian Business Solutions for company formation inquiries">
+    <title>Contact Us | Egyptian Business Solutions</title>
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/ltr.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="../images/logo.png" alt="STAR" style="height: 70px; border-radius: 8px;">
+                <div class="logo-text">
+                    STAR
+                    <span>Business Solutions</span>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="partners.html" class="nav-link">Partners</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="theme-toggle-wrapper">
+                    <label class="theme-toggle" for="themeSwitch">
+                        <input type="checkbox" id="themeSwitch">
+                        <span class="toggle-slider">
+                            <i class="fas fa-moon moon-icon"></i>
+                            <i class="fas fa-sun sun-icon"></i>
+                        </span>
+                    </label>
+                </div>
+                <div class="lang-dropdown">
+                    <button class="lang-toggle" id="langToggle">
+                        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <a href="contact.html" class="lang-option active">
+                            <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon">
+                            <span>English</span>
+                        </a>
+                        <a href="../contact.html" class="lang-option">
+                            <img src="https://flagcdn.com/w40/eg.png" alt="العربية" class="flag-icon">
+                            <span>العربية</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary hidden-mobile">Book Consultation</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header"
+        style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/portfolio/egypt-bg.png'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We are here to help you achieve your business goals in Saudi Arabia</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Choose your preferred way to contact us</p>
+
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h4>Phone / WhatsApp</h4>
+                            <p dir="ltr">+20 114 499 9188</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>Email</h4>
+                            <p>info@s-leadingbusiness.com</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4>Website</h4>
+                            <p>www.s-leadingbusiness.com</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4>Address</h4>
+                            <p>18 Maryland Buildings, Gesr Al Suez, Heliopolis, Cairo, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Enter your phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Service Required</label>
+                            <select class="form-control">
+                                <option value="">Select service</option>
+                                <option value="company">Company Formation</option>
+                                <option value="license">Commercial Licenses</option>
+                                <option value="legal">Legal Consultations</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="5" placeholder="Enter your message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="../images/logo.png" alt="STAR"
+                        style="height: 70px; border-radius: 8px; background: white; padding: 8px;">
+                    <div class="logo-text">
+                        STAR
+                        <span>Business Solutions</span>
+                    </div>
+                </a>
+                <p>Your trusted partner for company formation in Saudi Arabia.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <div class="footer-contact">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+20 114 499 9188</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@s-leadingbusiness.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 Egyptian Business Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/2001144999188?text=Hello, I want to inquire about services" class="whatsapp-btn"
+        target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
