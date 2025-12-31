@@ -535,18 +535,18 @@
         transform: translateX(22px) !important;
     }
 
-    /* Hide icons on mobile */
+    /* Show icons on mobile but smaller */
     .toggle-slider .moon-icon,
-    .toggle-slider .sun-icon,
-    .theme-toggle .moon-icon,
-    .theme-toggle .sun-icon,
-    .theme-toggle i,
-    .toggle-slider i {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        width: 0 !important;
-        height: 0 !important;
+    .toggle-slider .sun-icon {
+        font-size: 10px !important;
+    }
+
+    .toggle-slider .moon-icon {
+        right: 5px !important;
+    }
+
+    .toggle-slider .sun-icon {
+        left: 5px !important;
     }
 
     /* Language Toggle - smaller on mobile */
