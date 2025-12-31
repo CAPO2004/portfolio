@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="خدمات تأسيس الشركات في السعودية - التراخيص التجارية، السجل التجاري، الاستشارات القانونية وأكثر.">
+    <title>خدماتنا | الشركة المصرية للأعمال والحلول</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <!-- Background Animation Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="STAR - الشركة السعودية لريادة الأعمال"
+                    style="height: 70px; border-radius: 8px;">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="about.html" class="nav-link">من نحن</a></li>
+                    <li><a href="services.html" class="nav-link active">الخدمات</a></li>
+                    <li><a href="portfolio.html" class="nav-link">سابقة أعمالنا</a></li>
+                    <li><a href="partners.html" class="nav-link">شركاء النجاح</a></li>
+                    <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="theme-toggle-wrapper">
+                    <label class="theme-toggle" for="themeSwitch">
+                        <input type="checkbox" id="themeSwitch">
+                        <span class="toggle-slider">
+                            <i class="fas fa-moon moon-icon"></i>
+                            <i class="fas fa-sun sun-icon"></i>
+                        </span>
+                    </label>
+                </div>
+                <div class="lang-dropdown">
+                    <button class="lang-toggle" id="langToggle">
+                        <img src="https://flagcdn.com/w40/eg.png" alt="العربية" class="flag-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <a href="en/services.html" class="lang-option">
+                            <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon">
+                            <span>English</span>
+                        </a>
+                        <a href="services.html" class="lang-option active">
+                            <img src="https://flagcdn.com/w40/eg.png" alt="العربية" class="flag-icon">
+                            <span>العربية</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary hidden-mobile">احجز استشارة</a>
+
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/portfolio/egypt-bg.png'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h1>خدماتنا</h1>
+            <p>حلول متكاملة لتأسيس وإدارة شركتك في المملكة العربية السعودية</p>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدمات تأسيس الشركات</h2>
+                <p>نقدم لك جميع الخدمات اللازمة لتأسيس شركتك بنجاح في السوق السعودي</p>
+            </div>
+
+            <div class="services-grid">
+                <div id="company-formation" class="service-card with-image" data-animate="fadeInUp" data-delay="1">
+                    <div class="service-image">
+                        <img src="images/services/service1.jpeg" alt="تأسيس وتسجيل الشركات الاجنبية">
+                    </div>
+                    <div class="service-content">
+                        <h3>تأسيس وتسجيل الشركات الاجنبية</h3>
+                        <p>من منطلق رؤية المملكة 2030 نحو مستقبل أكثر إشراقاً وتطوراً في شتى المجالات التجارية والصناعية
+                            والخدمية.</p>
+                    </div>
+                </div>
+
+                <div class="service-card with-image" data-animate="fadeInUp" data-delay="2">
+                    <div class="service-image">
+                        <img src="images/services/service2.jpeg" alt="الاستحواذ على شركات خارجية">
+                    </div>
+                    <div class="service-content">
+                        <h3>الاستحواذ على شركات خارجية</h3>
+                        <p>نوفر إجراء الإستحواز على الشركات للمستثمرين الراغبين في إستكمال تأسيس الشركات الخاصة بهم
+                            بالمملكة.</p>
+                    </div>
+                </div>
+
+                <div id="licenses" class="service-card with-image" data-animate="fadeInUp" data-delay="3">
+                    <div class="service-image">
+                        <img src="images/services/service3.jpeg" alt="إصدار التراخيص - تصنيف وتأهيل الشركات">
+                    </div>
+                    <div class="service-content">
+                        <h3>إصدار التراخيص - تصنيف وتأهيل الشركات</h3>
+                        <p>خدمات متكاملة لتسهيل إصدار تراخيص الشركات والمصانع، وتصنيف وتأهيل الشركات والمقاولين وفق
+                            المعايير المعتمدة.</p>
+                    </div>
+                </div>
+
+                <div class="service-card with-image" data-animate="fadeInUp" data-delay="4">
+                    <div class="service-image">
+                        <img src="images/services/service4.jpeg" alt="دراسات الجدوى المعتمدة">
+                    </div>
+                    <div class="service-content">
+                        <h3>دراسات الجدوى المعتمدة</h3>
+                        <p>إعداد دراسات جدوى معتمدة تشمل التحليل المالي والفني والسوقي لضمان نجاح المشاريع واتخاذ قرارات
+                            استثمارية مدروسة.</p>
+                    </div>
+                </div>
+
+                <div class="service-card with-image" data-animate="fadeInUp" data-delay="5">
+                    <div class="service-image">
+                        <img src="images/services/service5.jpeg" alt="الحلول التسويقية والدعاية">
+                    </div>
+                    <div class="service-content">
+                        <h3>الحلول التسويقية والدعاية</h3>
+                        <p>حلول تسويقية متكاملة وخدمات دعاية مبتكرة لمساعدة الشركات على تعزيز المنافسة في السوق السعودي.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="legal" class="service-card with-image" data-animate="fadeInUp" data-delay="6">
+                    <div class="service-image">
+                        <img src="images/services/service6.jpeg" alt="الاستشارات الإدارية والمالية والضريبية">
+                    </div>
+                    <div class="service-content">
+                        <h3>الاستشارات الإدارية والمالية والضريبية</h3>
+                        <p>خدمات استشارات إدارية ومالية وضريبية متكاملة لدعم الشركات في تحقيق النمو والاستدامة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section id="post-formation" class="section bg-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدمات ما بعد التأسيس</h2>
+                <p>نستمر معك في رحلة النجاح حتى بعد تأسيس شركتك</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8">
+                <div class="card" data-animate="fadeInUp" data-delay="1">
+                    <div class="card-body" style="padding: var(--space-8);">
+                        <div style="display: flex; align-items: flex-start; gap: var(--space-5);">
+                            <div
+                                style="width: 60px; height: 60px; background: var(--primary-red-light); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-sync-alt" style="font-size: 1.5rem; color: var(--primary-red);"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-3);">التجديدات الدورية</h4>
+                                <p style="color: var(--gray-600); margin: 0;">تجديد السجل التجاري والتراخيص والاشتراكات
+                                    السنوية في الوقت المحدد لضمان استمرارية عملك.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-animate="fadeInUp" data-delay="2">
+                    <div class="card-body" style="padding: var(--space-8);">
+                        <div style="display: flex; align-items: flex-start; gap: var(--space-5);">
+                            <div
+                                style="width: 60px; height: 60px; background: var(--primary-red-light); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-edit" style="font-size: 1.5rem; color: var(--primary-red);"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-3);">التعديلات والتحديثات</h4>
+                                <p style="color: var(--gray-600); margin: 0;">تعديل عقود التأسيس وتغيير الشركاء وزيادة
+                                    رأس المال وإضافة أنشطة جديدة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-animate="fadeInUp" data-delay="3">
+                    <div class="card-body" style="padding: var(--space-8);">
+                        <div style="display: flex; align-items: flex-start; gap: var(--space-5);">
+                            <div
+                                style="width: 60px; height: 60px; background: var(--primary-red-light); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-building" style="font-size: 1.5rem; color: var(--primary-red);"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-3);">فتح الفروع</h4>
+                                <p style="color: var(--gray-600); margin: 0;">مساعدتك في التوسع وفتح فروع جديدة في مختلف
+                                    مناطق المملكة العربية السعودية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-animate="fadeInUp" data-delay="4">
+                    <div class="card-body" style="padding: var(--space-8);">
+                        <div style="display: flex; align-items: flex-start; gap: var(--space-5);">
+                            <div
+                                style="width: 60px; height: 60px; background: var(--primary-red-light); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-headset" style="font-size: 1.5rem; color: var(--primary-red);"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-3);">الدعم المستمر</h4>
+                                <p style="color: var(--gray-600); margin: 0;">فريق دعم متخصص للإجابة على استفساراتك
+                                    ومساعدتك في أي تحديات تواجهها.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>كيف نعمل؟</h2>
+                <p>خطوات بسيطة وواضحة لتأسيس شركتك</p>
+            </div>
+
+            <div class="grid grid-cols-4 gap-6">
+                <div class="text-center" data-animate="fadeInUp" data-delay="1">
+                    <div
+                        style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary-red), var(--accent-gold)); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-6); position: relative;">
+                        <span
+                            style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--light);">1</span>
+                    </div>
+                    <h4>التواصل والاستشارة</h4>
+                    <p style="color: var(--gray-600); font-size: var(--text-sm);">تواصل معنا لمناقشة مشروعك وتحديد
+                        احتياجاتك</p>
+                </div>
+
+                <div class="text-center" data-animate="fadeInUp" data-delay="2">
+                    <div
+                        style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary-red), var(--accent-gold)); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-6);">
+                        <span
+                            style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--light);">2</span>
+                    </div>
+                    <h4>تجهيز المستندات</h4>
+                    <p style="color: var(--gray-600); font-size: var(--text-sm);">نساعدك في تجهيز جميع المستندات
+                        المطلوبة</p>
+                </div>
+
+                <div class="text-center" data-animate="fadeInUp" data-delay="3">
+                    <div
+                        style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary-red), var(--accent-gold)); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-6);">
+                        <span
+                            style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--light);">3</span>
+                    </div>
+                    <h4>التنفيذ والمتابعة</h4>
+                    <p style="color: var(--gray-600); font-size: var(--text-sm);">نبدأ في تنفيذ الإجراءات مع متابعة
+                        مستمرة</p>
+                </div>
+
+                <div class="text-center" data-animate="fadeInUp" data-delay="4">
+                    <div
+                        style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary-red), var(--accent-gold)); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-6);">
+                        <span
+                            style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--light);">4</span>
+                    </div>
+                    <h4>التسليم والدعم</h4>
+                    <p style="color: var(--gray-600); font-size: var(--text-sm);">نسلمك جميع الوثائق مع دعم مستمر</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>هل أنت جاهز لتأسيس شركتك؟</h2>
+                <p>تواصل معنا الآن واحصل على استشارة مجانية لمشروعك</p>
+                <div class="flex justify-center gap-4">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-phone-alt"></i>
+                        احجز استشارة مجانية
+                    </a>
+                    <a href="tel:+2001144999188" class="btn btn-outline btn-lg"
+                        style="border-color: var(--light); color: var(--light);">
+                        اتصل الآن: 01144999188
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="STAR - الشركة السعودية لريادة الأعمال"
+                        style="height: 70px; border-radius: 8px; background: white; padding: 8px;">
+                </a>
+                <p>شريكك الموثوق لتأسيس الشركات في المملكة العربية السعودية.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100063686052749" target="_blank"
+                        class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/saudi.leadingbusiness" target="_blank" class="social-link"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@saudi.leading.business" target="_blank" class="social-link"
+                        aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="portfolio.html">سابقة أعمالنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>خدماتنا</h4>
+                <ul class="footer-links">
+                    <li><a href="#company-formation">تأسيس الشركات</a></li>
+                    <li><a href="#licenses">التراخيص التجارية</a></li>
+                    <li><a href="#legal">الاستشارات القانونية</a></li>
+                    <li><a href="#post-formation">خدمات ما بعد التأسيس</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>تواصل معنا</h4>
+                <div class="footer-contact">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span dir="ltr">+20 114 499 9188</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@s-leadingbusiness.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>هليوپوليس، القاهرة، مصر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 الشركة المصرية للأعمال والحلول. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2001144999188?text=مرحباً، أريد الاستفسار عن خدمات تأسيس الشركات" class="whatsapp-btn"
+        target="_blank" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">تواصل معنا عبر واتساب</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
