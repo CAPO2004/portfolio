@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="تعرف على الشركة المصرية للأعمال والحلول - رؤيتنا، رسالتنا، وفريق العمل المتخصص في تأسيس الشركات.">
+    <title>من نحن | الشركة المصرية للأعمال والحلول</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <!-- Background Animation Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="STAR - الشركة السعودية لريادة الأعمال"
+                    style="height: 70px; border-radius: 8px;">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="about.html" class="nav-link active">من نحن</a></li>
+                    <li><a href="services.html" class="nav-link">الخدمات</a></li>
+                    <li><a href="portfolio.html" class="nav-link">سابقة أعمالنا</a></li>
+                    <li><a href="partners.html" class="nav-link">شركاء النجاح</a></li>
+                    <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Dark Mode Toggle Switch -->
+                <div class="theme-toggle-wrapper">
+                    <label class="theme-toggle" for="themeSwitch">
+                        <input type="checkbox" id="themeSwitch">
+                        <span class="toggle-slider">
+                            <i class="fas fa-moon moon-icon"></i>
+                            <i class="fas fa-sun sun-icon"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Language Dropdown -->
+                <div class="lang-dropdown">
+                    <button class="lang-toggle" id="langToggle">
+                        <img src="https://flagcdn.com/w40/eg.png" alt="العربية" class="flag-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <a href="en/about.html" class="lang-option">
+                            <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon">
+                            <span>English</span>
+                        </a>
+                        <a href="about.html" class="lang-option active">
+                            <img src="https://flagcdn.com/w40/eg.png" alt="العربية" class="flag-icon">
+                            <span>العربية</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary hidden-mobile">احجز استشارة</a>
+
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/portfolio/egypt-bg.png'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h1>من نحن</h1>
+            <p>تعرف على قصتنا ورؤيتنا وفريق العمل المتميز</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image" data-animate="fadeInUp">
+                    <img src="images/about-team.png" alt="فريق عمل الشركة"
+                        style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-xl);">
+                </div>
+
+                <div class="about-text" data-animate="fadeInUp" data-delay="2">
+                    <h2>من نحن ؟</h2>
+                    <p>
+                        <strong>الشركة السعودية لريادة الأعمال (STAR)</strong> هي شركة مصرية بشراكة سعودية تقدم خدمات
+                        تجارية دولية ومحلية للشركات في عدة بلدان، بما في ذلك المجال التجاري والترويج للمشاريع
+                        الاستثمارية والصناعية، والتي تساعد في التغلب على التحديات في قطاعات عديدة.
+                    </p>
+                    <p>
+                        تُعد الشركة السعودية لريادة الأعمال شركة متكاملة ورائدة في مجالات اختصاصها، تقديم خدمات
+                        إستشارية فريدة ومطورة من خلال التقنيات والمنهجيات الحديثة، مدعومة بكوادر بشرية مؤهلة وأفضل
+                        المستشارين والخبراء في مختلف القطاعات.
+                    </p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> خبرة تتجاوز 15 سنة في تأسيس الشركات</li>
+                        <li><i class="fas fa-check-circle"></i> فروعنا: البحرين - السعودية - مصر</li>
+                        <li><i class="fas fa-check-circle"></i> شراكات إستراتيجية مع الجهات الحكومية السعودية</li>
+                        <li><i class="fas fa-check-circle"></i> دعم مستمر 24/7 حتى بعد إتمام التأسيس</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-phone-alt"></i>
+                        تواصل مع أحد خبرائنا
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-8">
+                <div class="card" data-animate="fadeInUp" data-delay="1">
+                    <div class="card-body" style="padding: var(--space-10);">
+                        <div
+                            style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-red), var(--primary-red-hover)); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-6);">
+                            <i class="fas fa-eye" style="font-size: 2rem; color: var(--light);"></i>
+                        </div>
+                        <h3 style="margin-bottom: var(--space-4);">رؤيتنا</h3>
+                        <p style="color: var(--gray-600); line-height: var(--leading-relaxed); margin: 0;">
+                            رؤيتنا أن نصبح الشركة الرائدة في مجالنا في الشرق الأوسط. نسعى جاهدين لتحقيق التفوق
+                            والابتكار في جميع جوانب عملنا. نحن نؤمن بأن النجاح يأتي من خلال تقديم أعلى مستويات
+                            الجودة والخدمة لعملائنا، مع الحفاظ على مرونة وقدرة على التكيف مع التحديات والتغيرات
+                            الجديدة.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" data-animate="fadeInUp" data-delay="2">
+                    <div class="card-body" style="padding: var(--space-10);">
+                        <div
+                            style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent-gold), #c9a227); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-6);">
+                            <i class="fas fa-bullseye" style="font-size: 2rem; color: var(--light);"></i>
+                        </div>
+                        <h3 style="margin-bottom: var(--space-4);">رسالتنا</h3>
+                        <p style="color: var(--gray-600); line-height: var(--leading-relaxed); margin: 0;">
+                            تمكين رواد الأعمال والمستثمرين من تحقيق طموحاتهم في المملكة العربية السعودية من خلال تقديم
+                            حلول متكاملة وشاملة تغطي جميع جوانب تأسيس وإدارة الشركات.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>قيمنا الأساسية</h2>
+                <p>المبادئ التي نؤمن بها وتوجه عملنا كل يوم</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card" data-animate="fadeInUp" data-delay="1">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>النزاهة</h4>
+                    <p>نلتزم بأعلى معايير الأمانة والشفافية في جميع تعاملاتنا مع عملائنا وشركائنا</p>
+                </div>
+
+                <div class="value-card" data-animate="fadeInUp" data-delay="2">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>التميز</h4>
+                    <p>نسعى دائماً لتقديم أفضل الخدمات وتجاوز توقعات عملائنا في كل مشروع</p>
+                </div>
+
+                <div class="value-card" data-animate="fadeInUp" data-delay="3">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>الشراكة</h4>
+                    <p>نؤمن بأن نجاح عملائنا هو نجاحنا، لذلك نعمل كشريك حقيقي وليس مجرد مقدم خدمة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>فريق القيادة</h2>
+                <p>فريق من الخبراء المتخصصين يعملون لتحقيق نجاحك</p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-8">
+                <div class="card" data-animate="fadeInUp" data-delay="1">
+                    <div
+                        style="height: 250px; background: linear-gradient(135deg, var(--gray-100), var(--gray-200)); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-user-tie" style="font-size: 5rem; color: var(--gray-400);"></i>
+                    </div>
+                    <div class="card-body text-center">
+                        <h4 class="card-title">أ. مصطفى</h4>
+                        <p class="text-primary fw-medium" style="margin-bottom: var(--space-2);">المدير العام</p>
+                        <p class="card-text">خبرة واسعة في مجال تأسيس الشركات والاستشارات التجارية</p>
+                    </div>
+                </div>
+
+                <div class="card" data-animate="fadeInUp" data-delay="2">
+                    <div
+                        style="height: 250px; background: linear-gradient(135deg, var(--gray-100), var(--gray-200)); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-user-tie" style="font-size: 5rem; color: var(--gray-400);"></i>
+                    </div>
+                    <div class="card-body text-center">
+                        <h4 class="card-title">المستشار القانوني</h4>
+                        <p class="text-primary fw-medium" style="margin-bottom: var(--space-2);">إدارة الشؤون القانونية
+                        </p>
+                        <p class="card-text">متخصص في القانون التجاري السعودي والدولي</p>
+                    </div>
+                </div>
+
+                <div class="card" data-animate="fadeInUp" data-delay="3">
+                    <div
+                        style="height: 250px; background: linear-gradient(135deg, var(--gray-100), var(--gray-200)); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-user-tie" style="font-size: 5rem; color: var(--gray-400);"></i>
+                    </div>
+                    <div class="card-body text-center">
+                        <h4 class="card-title">مدير العمليات</h4>
+                        <p class="text-primary fw-medium" style="margin-bottom: var(--space-2);">إدارة العمليات</p>
+                        <p class="card-text">خبرة في إدارة المشاريع والعمليات التجارية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>انضم إلى قائمة عملائنا الناجحين</h2>
+                <p>ابدأ رحلتك نحو النجاح في السوق السعودي معنا اليوم</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-phone-alt"></i>
+                    تواصل معنا الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="STAR - الشركة السعودية لريادة الأعمال"
+                        style="height: 70px; border-radius: 8px; background: white; padding: 8px;">
+                </a>
+                <p>شركة مصرية رائدة في مجال الإستشارات الإدارية والخدمات اللوجيستية لرواد الأعمال والمستثمرين. فروعنا:
+                    البحرين - السعودية - مصر</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100063686052749" target="_blank"
+                        class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/saudi.leadingbusiness" target="_blank" class="social-link"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@saudi.leading.business" target="_blank" class="social-link"
+                        aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="portfolio.html">سابقة أعمالنا</a></li>
+                    <li><a href="partners.html">شركاء النجاح</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>خدماتنا</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html#company-formation">تأسيس الشركات</a></li>
+                    <li><a href="services.html#licenses">التراخيص التجارية</a></li>
+                    <li><a href="services.html#legal">الاستشارات القانونية</a></li>
+                    <li><a href="services.html#post-formation">خدمات ما بعد التأسيس</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>تواصل معنا</h4>
+                <div class="footer-contact">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span dir="ltr">+20 114 499 9188</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@s-leadingbusiness.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>هليوپوليس، القاهرة، مصر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 الشركة المصرية للأعمال والحلول. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2001144999188?text=مرحباً، أريد الاستفسار عن خدمات تأسيس الشركات" class="whatsapp-btn"
+        target="_blank" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">تواصل معنا عبر واتساب</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
