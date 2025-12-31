@@ -513,19 +513,31 @@
         display: flex !important;
     }
 
-    /* Theme Toggle - comfortable size on mobile */
+    /* Theme Toggle - fixed for mobile */
     .theme-toggle {
-        width: 56px;
-        height: 30px;
+        width: 48px;
+        height: 26px;
     }
 
-    .theme-toggle-slider::before {
-        height: 24px;
-        width: 24px;
+    .toggle-slider {
+        padding: 0 4px !important;
     }
 
-    .theme-toggle-input:checked+.theme-toggle-slider::before {
-        transform: translateX(26px);
+    .toggle-slider::before {
+        height: 20px;
+        width: 20px;
+        left: 2px !important;
+        bottom: 1px !important;
+    }
+
+    .theme-toggle input:checked+.toggle-slider::before {
+        transform: translateX(22px);
+    }
+
+    /* Hide icons on mobile to prevent overlap */
+    .toggle-slider .moon-icon,
+    .toggle-slider .sun-icon {
+        display: none !important;
     }
 
     /* Language Toggle - smaller on mobile */
