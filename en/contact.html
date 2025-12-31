@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Us - Egyptian Business Solutions. Get a free consultation to establish your company in Saudi Arabia.">
+    <title>Contact Us | Egyptian Business Solutions</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/ltr.css">
+</head>
+
+<body>
+    <!-- Background Animation Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="../images/logo.png" alt="STAR - Saudi Leading Business"
+                    style="height: 70px; border-radius: 8px;">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="partners.html" class="nav-link">Partners</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="theme-toggle-wrapper">
+                    <label class="theme-toggle" for="themeSwitch">
+                        <input type="checkbox" id="themeSwitch">
+                        <span class="toggle-slider">
+                            <i class="fas fa-moon moon-icon"></i>
+                            <i class="fas fa-sun sun-icon"></i>
+                        </span>
+                    </label>
+                </div>
+                <div class="lang-dropdown">
+                    <button class="lang-toggle" id="langToggle">
+                        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <a href="contact.html" class="lang-option active">
+                            <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon">
+                            <span>English</span>
+                        </a>
+                        <a href="../contact.html" class="lang-option">
+                            <img src="https://flagcdn.com/w40/eg.png" alt="العربية" class="flag-icon">
+                            <span>العربية</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary hidden-mobile">Book Consultation</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/portfolio/egypt-bg.png'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We are here to help you achieve your business goals in Saudi Arabia</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info-card" data-animate="fadeInUp">
+                    <h3>Contact Information</h3>
+                    <p style="color: var(--gray-400); margin-bottom: var(--space-8);">
+                        We are happy to hear from you. Our team is ready to answer your inquiries and help you on your
+                        journey to success.
+                    </p>
+
+                    <div class="contact-info-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h5>Managing Director</h5>
+                            <p>Mr. Mostafa</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p dir="ltr">+20 114 499 9188</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h5>WhatsApp</h5>
+                            <p dir="ltr">+20 114 499 9188</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h5>Email</h5>
+                            <p>info@s-leadingbusiness.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h5>Website</h5>
+                            <p>www.s-leadingbusiness.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h5>Address</h5>
+                            <p>18 Maryland Buildings, Gesr Al Suez, Heliopolis, Cairo, Egypt</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h5>Working Hours</h5>
+                            <p>Saturday - Thursday: 9 AM - 6 PM</p>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid rgba(255,255,255,0.1);">
+                        <h5 style="color: var(--light); margin-bottom: var(--space-4);">Follow Us</h5>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100063686052749" class="social-link"
+                                aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/saudi.leadingbusiness" class="social-link"
+                                aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@saudi.leading.business" class="social-link"
+                                aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card" data-animate="fadeInUp" data-delay="2">
+                    <h3 style="margin-bottom: var(--space-2);">Send Your Message</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--space-8);">
+                        Fill out the following form and we will contact you as soon as possible
+                    </p>
+
+                    <form id="contactForm">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-control"
+                                    placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-control"
+                                    placeholder="+20 1xxxxxxxxx" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="example@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="service">Required Service</label>
+                            <select id="service" name="service" class="form-control">
+                                <option value="">Select Service</option>
+                                <option value="company-establishment">Company Establishment</option>
+                                <option value="commercial-registration">Commercial Registration</option>
+                                <option value="investment-license">Investment License</option>
+                                <option value="legal-consultation">Legal Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">Your Message *</label>
+                            <textarea id="message" name="message" class="form-control"
+                                placeholder="Write your message or inquiry here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Quick Contact Methods</h2>
+                <p>Choose the most convenient way to contact us</p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-8">
+                <a href="https://wa.me/2001144999188?text=Hello, I want to inquire about company formation services"
+                    target="_blank" class="card" style="text-decoration: none;" data-animate="fadeInUp" data-delay="1">
+                    <div class="card-body text-center" style="padding: var(--space-10);">
+                        <div
+                            style="width: 80px; height: 80px; background: #25D366; border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-6);">
+                            <i class="fab fa-whatsapp" style="font-size: 2.5rem; color: var(--light);"></i>
+                        </div>
+                        <h4>WhatsApp</h4>
+                        <p style="color: var(--gray-600);">Contact us directly via WhatsApp for quick response</p>
+                    </div>
+                </a>
+
+                <a href="tel:+2001144999188" class="card" style="text-decoration: none;" data-animate="fadeInUp"
+                    data-delay="2">
+                    <div class="card-body text-center" style="padding: var(--space-10);">
+                        <div
+                            style="width: 80px; height: 80px; background: var(--primary-red); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-6);">
+                            <i class="fas fa-phone-alt" style="font-size: 2rem; color: var(--light);"></i>
+                        </div>
+                        <h4>Direct Call</h4>
+                        <p style="color: var(--gray-600);">Call us now to speak with one of our consultants</p>
+                    </div>
+                </a>
+
+                <a href="mailto:info@s-leadingbusiness.com" class="card" style="text-decoration: none;"
+                    data-animate="fadeInUp" data-delay="3">
+                    <div class="card-body text-center" style="padding: var(--space-10);">
+                        <div
+                            style="width: 80px; height: 80px; background: var(--accent-gold); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-6);">
+                            <i class="fas fa-envelope" style="font-size: 2rem; color: var(--light);"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p style="color: var(--gray-600);">Send us an email and we will reply soon</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+                <p>You can visit us at our office</p>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.8!2d31.3333!3d30.0833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sHeliopolis%2C%20Cairo%20Governorate%2C%20Egypt!5e0!3m2!1sen!2seg!4v1704052800000!5m2!1sen!2seg"
+                    width="100%" height="450" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="../images/logo.png" alt="STAR - Saudi Leading Business"
+                        style="height: 70px; border-radius: 8px; background: white; padding: 8px;">
+                </a>
+                <p>A leading Egyptian company in administrative consultations and logistical services for entrepreneurs
+                    and investors. Branches: Bahrain - Saudi Arabia - Egypt</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100063686052749" target="_blank"
+                        class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/saudi.leadingbusiness" target="_blank" class="social-link"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@saudi.leading.business" target="_blank" class="social-link"
+                        aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html#company-formation">Company Formation</a></li>
+                    <li><a href="services.html#licenses">Commercial Licenses</a></li>
+                    <li><a href="services.html#legal">Legal Consultations</a></li>
+                    <li><a href="services.html#post-formation">Post-Formation Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <div class="footer-contact">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span dir="ltr">+20 114 499 9188</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@s-leadingbusiness.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Heliopolis, Cairo, Egypt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 Egyptian Business Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2001144999188?text=Hello, I want to inquire about company formation services"
+        class="whatsapp-btn" target="_blank" aria-label="Contact via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Contact us via WhatsApp</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
