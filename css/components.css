@@ -513,12 +513,29 @@
         display: flex !important;
     }
 
-    /* Theme Toggle - scale down like reference site */
+    /* Theme Toggle - complete mobile fix */
     .theme-toggle {
-        transform: scale(0.85);
+        width: 50px !important;
+        height: 28px !important;
     }
 
-    /* Hide icons on mobile to prevent overlap */
+    .toggle-slider {
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .toggle-slider::before {
+        width: 22px !important;
+        height: 22px !important;
+        left: 2px !important;
+        bottom: 1px !important;
+    }
+
+    .theme-toggle input:checked+.toggle-slider::before {
+        transform: translateX(22px) !important;
+    }
+
+    /* Hide icons on mobile */
     .toggle-slider .moon-icon,
     .toggle-slider .sun-icon,
     .theme-toggle .moon-icon,
@@ -528,7 +545,8 @@
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
-        font-size: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
     }
 
     /* Language Toggle - smaller on mobile */
