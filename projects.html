@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Showcase | Ahmed Adel Saad Obaid</title>
+  
+  <meta name="description" content="Technical systems and projects engineered by Ahmed Adel Saad Obaid: DeepVision AI deepfake detection, e-commerce storefront, corporate websites, and interactive educational platforms.">
+  <meta name="keywords" content="Ahmed Adel Saad Obaid, DeepVision, Deepfake Detection, Projects, Portfolio, Web Development, PHP, PyTorch">
+  <meta name="author" content="Ahmed Adel Saad Obaid">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23070b13%22/><path d=%22M50 20 L80 32 L80 62 L50 82 L20 62 L20 32 Z%22 fill=%22none%22 stroke=%22%2300f0ff%22 stroke-width=%228%22/></svg>">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css?v=v3">
+  <link rel="stylesheet" href="css/responsive.css?v=v3">
+</head>
+<body>
+
+
+  <!-- Canvas Background -->
+  <canvas id="cyber-canvas"></canvas>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Ahmed Adel Saad Obaid Portfolio">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <span class="brand-text">Ahmed Adel</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about_full">About & Credentials</a>
+        <a href="projects.html" class="nav-link active" data-i18n="nav_projects_full">Projects</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact_full">Contact & Services</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Switch (PHP-Mastery Slider) -->
+        <label class="theme-switch" title="Toggle Theme (Dark / Light)">
+          <input type="checkbox" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+          <span class="slider">
+            <svg class="icon sun" viewBox="0 0 24 24" width="14" height="14">
+              <circle cx="12" cy="12" r="4" fill="#fcd34d" />
+              <g stroke="#fcd34d" stroke-width="2" stroke-linecap="round">
+                <line x1="12" y1="2" x2="12" y2="4" />
+                <line x1="12" y1="20" x2="12" y2="22" />
+                <line x1="4" y1="12" x2="2" y2="12" />
+                <line x1="22" y1="12" x2="20" y2="12" />
+              </g>
+            </svg>
+            <svg class="icon moon" viewBox="0 0 24 24" width="14" height="14">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="#e9d5ff" stroke="#c4b5fd" stroke-width="1" />
+            </svg>
+          </span>
+        </label>
+
+        <!-- Language Dropdown (PHP-Mastery Flag Dropdown) -->
+        <div class="lang-dropdown">
+          <button id="lang-toggle" class="lang-btn" title="Switch Language (العربية / English)" aria-label="Switch Language">
+            <img src="https://flagcdn.com/w40/sa.png" alt="AR" class="flag-icon" id="current-flag">
+            <span class="lang-arrow">▼</span>
+          </button>
+          <div class="lang-menu" id="lang-menu">
+            <button class="lang-option" data-lang="en">
+              <img src="https://flagcdn.com/w40/us.png" alt="EN" class="flag-icon">
+              <span>English</span>
+            </button>
+            <button class="lang-option" data-lang="ar">
+              <img src="https://flagcdn.com/w40/sa.png" alt="AR" class="flag-icon">
+              <span>العربية</span>
+            </button>
+          </div>
+        </div>
+
+        <button class="action-btn menu-toggle-btn" id="menu-toggle" aria-label="Toggle Mobile Navigation" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Subpage Hero -->
+  <section class="subpage-hero">
+    <div class="container">
+      <div class="section-tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+        <span data-i18n="page_projects_tag">PORTFOLIO & WORK</span>
+      </div>
+      <h1 class="section-title" data-i18n="page_projects_title">Technical Systems & <span class="text-gradient">Projects</span></h1>
+      <p class="section-subtitle" data-i18n="page_projects_subtitle">
+        Explore independently engineered cybersecurity AI systems, enterprise web applications, and live interactive platforms.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <main class="container" style="padding-bottom: 90px;">
+    <!-- Filter Tabs -->
+    <div class="projects-filter-bar">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Projects</button>
+      <button class="filter-btn" data-filter="cyber" data-i18n="filter_cyber">Cybersecurity & AI</button>
+      <button class="filter-btn" data-filter="web" data-i18n="filter_web">Web Development</button>
+      <button class="filter-btn" data-filter="client" data-i18n="filter_client">Client / Company Work</button>
+    </div>
+
+    <!-- Uniform Clean Project Cards -->
+    <div class="projects-grid">
+      <!-- 1. DeepVision -->
+      <div class="project-card" data-category="cyber">
+        <div class="project-media-wrapper">
+          <img src="assets/deepvision/Picture110.png" alt="DeepVision Deepfake Detection System" loading="lazy">
+          <span class="project-badge-tag" data-i18n="dv_badge">Cybersecurity & AI Flagship</span>
+        </div>
+        <div class="project-body">
+          <div class="project-category" style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;" data-i18n="dv_role_brief">
+            98.32% ACCURACY &bull; INDIVIDUAL PROJECT
+          </div>
+          <h2 class="project-title" style="font-size: 1.35rem; margin: 0;" data-i18n="dv_title_short">
+            DeepVision: AI Deepfake Detection System
+          </h2>
+          <p class="project-desc" style="margin: 0;" data-i18n="dv_desc_card">
+            Multi-stage facial forensics system using MediaPipe BlazeFace, EfficientNet-B4 backbone, and CBAM (Channel & Spatial Attention) evaluated on 24,859 benchmark samples.
+          </p>
+          <div class="project-tech-chips">
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">EfficientNet-B4</span>
+            <span class="tech-tag">CBAM Attention</span>
+            <span class="tech-tag">MediaPipe</span>
+            <span class="tech-tag">OpenCV</span>
+          </div>
+          <div class="project-footer-actions">
+            <a href="project-deepvision.html" class="btn btn-primary btn-sm">
+              <span data-i18n="btn_view_case_study">View Full Case Study &rarr;</span>
+            </a>
+            <a href="https://github.com/CAPO2004/DeepVision" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <span data-i18n="btn_github_repo">GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. STAR Business Services -->
+      <div class="project-card" data-category="client">
+        <div class="project-media-wrapper">
+          <img src="assets/company-website/Screenshot 2026-09-15 161723.png" alt="STAR Business Services Corporate Website" loading="lazy">
+          <span class="project-badge-tag" style="color: var(--accent-purple); border-color: rgba(138,43,226,0.3);" data-i18n="star_client_badge">Corporate Client Project</span>
+        </div>
+        <div class="project-body">
+          <div class="project-category" style="color: var(--accent-purple); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;" data-i18n="star_client_name">
+            CLIENT: الشركة السعودية لريادة الأعمال (STAR)
+          </div>
+          <h2 class="project-title" style="font-size: 1.35rem; margin: 0;" data-i18n="star_hero_title">
+            STAR Business Services — Corporate Website
+          </h2>
+          <p class="project-desc" style="margin: 0;" data-i18n="star_desc_card">
+            Official corporate portal delivering executive consulting presentations, an interactive consultation booking workflow, client case studies, and a brand preloader animation.
+          </p>
+          <div class="project-tech-chips">
+            <span class="tech-tag">HTML5 / CSS3</span>
+            <span class="tech-tag">JavaScript ES6</span>
+            <span class="tech-tag">Brand Preloader</span>
+            <span class="tech-tag">Consultation UI</span>
+          </div>
+          <div class="project-footer-actions">
+            <a href="project-star.html" class="btn btn-primary btn-sm">
+              <span data-i18n="btn_view_project_details">View Project Details &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Modern E-Commerce Store -->
+      <div class="project-card" data-category="web">
+        <div class="project-media-wrapper">
+          <img src="assets/ecommerce/Screenshot 2026-09-12 161947.png" alt="Modern E-Commerce Store" loading="lazy">
+          <span class="project-badge-tag" style="color: var(--accent-teal); border-color: rgba(0,255,178,0.3);" data-i18n="store_badge">Web Application</span>
+        </div>
+        <div class="project-body">
+          <div class="project-category" style="color: var(--accent-teal); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;" data-i18n="store_role_tag">
+            FRONT-END SYSTEM &bull; STOREFRONT UX
+          </div>
+          <h2 class="project-title" style="font-size: 1.35rem; margin: 0;" data-i18n="store_hero_title">
+            Modern E-Commerce Store
+          </h2>
+          <p class="project-desc" style="margin: 0;" data-i18n="store_desc_card">
+            Responsive storefront interface engineered with dynamic product category filtering, instant price calculation, a sliding cart drawer, and multi-step checkout.
+          </p>
+          <div class="project-tech-chips">
+            <span class="tech-tag">JavaScript ES6+</span>
+            <span class="tech-tag">Shopping Cart Drawer</span>
+            <span class="tech-tag">Filter Engine</span>
+            <span class="tech-tag">Checkout Flow</span>
+          </div>
+          <div class="project-footer-actions">
+            <a href="project-store.html" class="btn btn-primary btn-sm">
+              <span data-i18n="btn_view_project_details">View Project Details &rarr;</span>
+            </a>
+            <a href="https://capo2004.github.io/store/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <span data-i18n="btn_open_live_demo">Live Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. PHP Mastery -->
+      <div class="project-card" data-category="web">
+        <div class="project-media-wrapper">
+          <img src="assets/php-mastery/Screenshot 2026-09-12 154019.png" alt="PHP Mastery Educational Platform" loading="lazy">
+          <span class="project-badge-tag" style="color: var(--accent-teal); border-color: rgba(0,255,178,0.3);" data-i18n="php_badge">Educational Platform</span>
+        </div>
+        <div class="project-body">
+          <div class="project-category" style="color: var(--accent-teal); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;" data-i18n="php_role_tag">
+            INTERACTIVE LEARNING &bull; FRONT-END
+          </div>
+          <h2 class="project-title" style="font-size: 1.35rem; margin: 0;" data-i18n="php_hero_title">
+            PHP Mastery — Interactive Learning Platform
+          </h2>
+          <p class="project-desc" style="margin: 0;" data-i18n="php_desc_card">
+            Educational platform for PHP programming featuring glassmorphic cyber styling, structured lesson indexing, live code playgrounds, and instant evaluation quizzes.
+          </p>
+          <div class="project-tech-chips">
+            <span class="tech-tag">Interactive UI</span>
+            <span class="tech-tag">Glassmorphism</span>
+            <span class="tech-tag">Code Playground</span>
+            <span class="tech-tag">Quiz Engine</span>
+          </div>
+          <div class="project-footer-actions">
+            <a href="project-php.html" class="btn btn-primary btn-sm">
+              <span data-i18n="btn_view_project_details">View Project Details &rarr;</span>
+            </a>
+            <a href="https://capo2004.github.io/PHP-Mastery/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <span data-i18n="btn_open_live_demo">Live Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== ENTERPRISE MEGA FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 14px; text-decoration: none;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <span class="brand-text">Ahmed Adel</span>
+          </a>
+          <p class="footer-bio">
+            Computer Science student at Arab Open University, Cisco CCNA Certified, and DEPI Cybersecurity Fellow. Specializing in SOC operations, threat intelligence, and modern web systems.
+          </p>
+          <div class="footer-status-pill">
+            <span class="pulse-dot"></span>
+            <span>Available for SOC & Security Roles</span>
+          </div>
+          <div class="footer-socials">
+            <a href="https://github.com/CAPO2004" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ahmed-adel-b79410319/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:ahmedadellinkedin2004@gmail.com" class="footer-social-link" aria-label="Direct Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+            <a href="tel:01090204281" class="footer-social-link" aria-label="Phone Contact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_col_nav">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav_about_full">About & Credentials</a></li>
+            <li><a href="projects.html" data-i18n="nav_projects_full">Projects Showcase</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact_full">Services & Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Case Studies -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_col_projects">Case Studies</h4>
+          <ul class="footer-links-list">
+            <li><a href="project-deepvision.html">DeepVision (AI Detection)</a></li>
+            <li><a href="project-star.html">STAR Corporate Portal</a></li>
+            <li><a href="project-store.html">Modern E-Commerce</a></li>
+            <li><a href="project-php.html">PHP Mastery Platform</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Contact -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_col_contact">Direct Contact</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:ahmedadellinkedin2004@gmail.com">ahmedadellinkedin2004@gmail.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:01090204281">+20 109 020 4281</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span data-i18n="footer_location">Menofia, Egypt</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>Arab Open University (AOU)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p data-i18n="copyright">© 2026 Ahmed Adel Saad Obaid. All rights reserved.</p>
+        <p data-i18n="footer_built">Engineered with semantic HTML, CSS, and vanilla JavaScript.</p>
+        <a href="#projects-hero" id="back-to-top" style="color: var(--accent-cyan); text-decoration: none; font-weight: 600;">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepVision Case Study | Ahmed Adel Saad Obaid — Deepfake Detection</title>
+  <meta name="description" content="DeepVision is a cutting-edge deepfake detection system engineered with PyTorch, Convolutional Block Attention Modules (CBAM), and MTCNN facial extraction.">
+  <meta name="keywords" content="DeepVision, Deepfake Detection, PyTorch, CBAM Attention, FaceForensics++, Convolutional Neural Networks, Computer Vision, AI Security">
+  <meta name="author" content="Ahmed Adel Saad Obaid">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23070b13%22/><path d=%22M50 20 L80 32 L80 62 L50 82 L20 62 L20 32 Z%22 fill=%22none%22 stroke=%22%2300f0ff%22 stroke-width=%228%22/></svg>">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css?v=v3">
+  <link rel="stylesheet" href="css/responsive.css?v=v3">
+</head>
+<body>
+  <!-- Canvas Background -->
+  <canvas id="cyber-canvas"></canvas>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Ahmed Adel Saad Obaid Portfolio">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <span class="brand-text">Ahmed Adel</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about_full">About & Credentials</a>
+        <a href="projects.html" class="nav-link active" data-i18n="nav_projects_full">Projects</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact_full">Contact & Services</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Switch (PHP-Mastery Slider) -->
+        <label class="theme-switch" title="Toggle Theme (Dark / Light)">
+          <input type="checkbox" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+          <span class="slider">
+            <svg class="icon sun" viewBox="0 0 24 24" width="14" height="14">
+              <circle cx="12" cy="12" r="4" fill="#fcd34d" />
+              <g stroke="#fcd34d" stroke-width="2" stroke-linecap="round">
+                <line x1="12" y1="2" x2="12" y2="4" />
+                <line x1="12" y1="20" x2="12" y2="22" />
+                <line x1="4" y1="12" x2="2" y2="12" />
+                <line x1="22" y1="12" x2="20" y2="12" />
+              </g>
+            </svg>
+            <svg class="icon moon" viewBox="0 0 24 24" width="14" height="14">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="#e9d5ff" stroke="#c4b5fd" stroke-width="1" />
+            </svg>
+          </span>
+        </label>
+
+        <!-- Language Dropdown (PHP-Mastery Flag Dropdown) -->
+        <div class="lang-dropdown">
+          <button id="lang-toggle" class="lang-btn" title="Switch Language (العربية / English)" aria-label="Switch Language">
+            <img src="https://flagcdn.com/w40/sa.png" alt="AR" class="flag-icon" id="current-flag">
+            <span class="lang-arrow">▼</span>
+          </button>
+          <div class="lang-menu" id="lang-menu">
+            <button class="lang-option" data-lang="en">
+              <img src="https://flagcdn.com/w40/us.png" alt="EN" class="flag-icon">
+              <span>English</span>
+            </button>
+            <button class="lang-option" data-lang="ar">
+              <img src="https://flagcdn.com/w40/sa.png" alt="AR" class="flag-icon">
+              <span>العربية</span>
+            </button>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="btn_contact_nav">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Hero -->
+  <section class="project-detail-hero">
+    <div class="container" style="max-width: 1060px;">
+      <a href="projects.html" class="back-link-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span data-i18n="btn_back_projects">Back to All Projects</span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
+        <span class="flagship-badge" data-i18n="dv_tag">FLAGSHIP AI & CYBERSECURITY SYSTEM</span>
+        <span class="flagship-role-tag" data-i18n="dv_role">Individual Project / Developed Independently</span>
+      </div>
+
+      <h1 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 14px; line-height: 1.2;" data-i18n="dv_hero_title">
+        DeepVision: <span class="text-gradient">AI Deepfake Detection System</span>
+      </h1>
+
+      <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; max-width: 820px; margin-bottom: 24px;" data-i18n="dv_hero_desc">
+        A high-performance forensics system engineered to detect hyper-realistic facial manipulations across static images and dynamic video sequences with calibrated temporal confidence.
+      </p>
+
+      <!-- Key Metrics Row -->
+      <div class="eval-stats-grid" style="margin: 28px 0;">
+        <div class="eval-stat-card teal">
+          <div class="eval-stat-number">98.32%</div>
+          <div class="eval-stat-label" data-i18n="dv_stat_accuracy_label">Overall Accuracy</div>
+          <div class="eval-stat-sub" data-i18n="dv_stat_evaluated">Evaluated on 24,859 Samples</div>
+        </div>
+        <div class="eval-stat-card">
+          <div class="eval-stat-number">99.01%</div>
+          <div class="eval-stat-label" data-i18n="dv_stat_fake_label">Fake F1-Score</div>
+          <div class="eval-stat-sub" data-i18n="dv_stat_fake_sub">Precision: 99.11% | Recall: 98.90%</div>
+        </div>
+        <div class="eval-stat-card purple">
+          <div class="eval-stat-number">CBAM</div>
+          <div class="eval-stat-label" data-i18n="dv_stat_backbone_label">Attention Backbone</div>
+          <div class="eval-stat-sub" data-i18n="dv_stat_cbam_sub">Channel + Spatial Attention</div>
+        </div>
+        <div class="eval-stat-card">
+          <div class="eval-stat-number">FaceForensics++</div>
+          <div class="eval-stat-label" data-i18n="dv_stat_dataset_label">Benchmark Dataset</div>
+          <div class="eval-stat-sub" data-i18n="dv_stat_ff_sub">C23 Compression Benchmark</div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="https://github.com/CAPO2004/DeepVision" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <span data-i18n="btn_github_code">View Source Code on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Case Study Body -->
+  <main class="container project-detail-layout">
+    <!-- Lead Media -->
+    <div class="project-detail-lead-media" data-lightbox-src="assets/deepvision/Picture110.png" data-lightbox-caption="DeepVision Web Prediction Interface">
+      <img src="assets/deepvision/Picture110.png" alt="DeepVision Prediction Interface" loading="lazy">
+    </div>
+
+    <!-- 1. The Problem -->
+    <section class="project-detail-section">
+      <div class="project-detail-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <span data-i18n="dv_sec1_title">1. The Problem: The Proliferation of Synthetic Forgery</span>
+      </div>
+      <p style="color: var(--text-secondary); line-height: 1.75; font-size: 1rem; margin-bottom: 14px;" data-i18n="dv_sec1_p1">
+        The rapid advancement of deep learning generative models (GANs and diffusion algorithms) has allowed threat actors to create hyper-realistic synthetic video and image manipulations with minimal effort. Deepfakes threaten organizational communications, executive identity verification, KYC onboarding, and judicial evidence.
+      </p>
+      <p style="color: var(--text-secondary); line-height: 1.75; font-size: 1rem;" data-i18n="dv_sec1_p2">
+        Standard classification architectures struggle with real-world compressed video. Passing entire frames without facial isolation creates background noise, leading to catastrophic false alarms or missed manipulation artifacts along facial boundaries.
+      </p>
+    </section>
+
+    <!-- 2. The Solution & Architecture -->
+    <section class="project-detail-section">
+      <div class="project-detail-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span data-i18n="dv_sec2_title">2. The Concept: Biometric Localization & Attentive Feature Forensics</span>
+      </div>
+      <p style="color: var(--text-secondary); line-height: 1.75; font-size: 1rem; margin-bottom: 18px;" data-i18n="dv_sec2_p1">
+        DeepVision solves this through an end-to-end multi-stage pipeline. The system strips away non-informative background pixels, resamples the facial crop with a 20% outer boundary margin, and feeds the normalized tensor through an <strong>EfficientNet-B4</strong> backbone augmented with a <strong>Convolutional Block Attention Module (CBAM)</strong>.
+      </p>
+      <div class="case-study-tech-tags">
+        <span class="case-study-tech-tag">Python 3.10+</span>
+        <span class="case-study-tech-tag">PyTorch</span>
+        <span class="case-study-tech-tag">EfficientNet-B4</span>
+        <span class="case-study-tech-tag">CBAM Attention</span>
+        <span class="case-study-tech-tag">MediaPipe BlazeFace</span>
+        <span class="case-study-tech-tag">OpenCV</span>
+        <span class="case-study-tech-tag">NumPy</span>
+        <span class="case-study-tech-tag">Scikit-learn</span>
+      </div>
+    </section>
+
+    <!-- 3. The 5-Step Pipeline -->
+    <section class="project-detail-section">
+      <div class="project-detail-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        <span data-i18n="dv_sec3_title">3. Complete Processing Pipeline</span>
+      </div>
+      <div class="pipeline-steps">
+        <div class="pipeline-step">
+          <span class="step-number">Step 01</span>
+          <span class="step-name">Face Detection & Extraction</span>
+          <p class="step-desc">MediaPipe BlazeFace extracts candidate face coordinates with a calibrated 20% safety margin to capture hair/jaw blend edges.</p>
+        </div>
+        <div class="pipeline-step">
+          <span class="step-number">Step 02</span>
+          <span class="step-name">Input Normalization</span>
+          <p class="step-desc">Bilinear resampling to 224 &times; 224 RGB tensor with standard ImageNet mean and variance channel scaling.</p>
+        </div>
+        <div class="pipeline-step">
+          <span class="step-number">Step 03</span>
+          <span class="step-name">Feature Extraction & CBAM</span>
+          <p class="step-desc">EfficientNet-B4 extracts deep spatial representations, refined sequentially by Channel and Spatial Attention modules.</p>
+        </div>
+        <div class="pipeline-step">
+          <span class="step-number">Step 04</span>
+          <span class="step-name">Temporal Video Sampling</span>
+          <p class="step-desc">For video inputs, 50 uniformly spaced frames are processed to detect temporal flicker and anomaly bursts.</p>
+        </div>
+        <div class="pipeline-step">
+          <span class="step-number">Step 05</span>
+          <span class="step-name">Calibrated Inference</span>
+          <p class="step-desc">Sigmoid probability mapped to calibrated confidence percentage with Real vs. Fake classification verdict.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CBAM In-Depth -->
+    <section class="project-detail-section">
+      <div class="project-detail-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>
+        <span>4. CBAM Attention Mechanism In-Depth</span>
+      </div>
+      <p style="color: var(--text-secondary); line-height: 1.75; font-size: 1rem; margin-bottom: 16px;">
+        CBAM (Convolutional Block Attention Module) is integrated directly into the upper stages of the backbone:
+        <br><br>
+        <strong>Channel Attention:</strong> Uses both Global Average Pooling and Global Max Pooling simultaneously to aggregate channel-wise feature signals, routing them through a shared Multi-Layer Perceptron (MLP). This tells the model <em>which feature maps</em> capture artifact cues.
+        <br><br>
+        <strong>Spatial Attention:</strong> Takes the channel-refined feature map, applies channel-wise average and max pooling, concatenates them, and applies a 7&times;7 convolution. This directs the neural network's focus to <em>where</em> local manipulation artifacts exist across facial boundaries.
+      </p>
+
+      <div class="code-snippet-box">
+<span style="color:#7dd3fc">class</span> <span style="color:#fde047">ChannelAttention</span>(nn.Module):
+    <span style="color:#7dd3fc">def</span> <span style="color:#93c5fd">__init__</span>(self, in_planes, ratio=16):
+        super().__init__()
+        self.avg_pool = nn.AdaptiveAvgPool2d(1)
+        self.max_pool = nn.AdaptiveMaxPool2d(1)
+        self.fc = nn.Sequential(
+            nn.Conv2d(in_planes, in_planes // ratio, 1, bias=False),
+            nn.ReLU(),
+            nn.Conv2d(in_planes // ratio, in_planes, 1, bias=False)
+        )
+        self.sigmoid = nn.Sigmoid()
+
+    <span style="color:#7dd3fc">def</span> <span style="color:#93c5fd">forward</span>(self, x):
+        avg_out = self.fc(self.avg_pool(x))
+        max_out = self.fc(self.max_pool(x))
+        <span style="color:#7dd3fc">return</span> self.sigmoid(avg_out + max_out) * x
+      </div>
+    </section>
+
+    <!-- 5. Dataset -->
+    <section class="project-detail-section">
+      <div class="project-detail-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        <span>5. Dataset & Benchmark Specifications</span>
+      </div>
+      <p style="color: var(--text-secondary); line-height: 1.75; font-size: 1rem; margin-bottom: 20px;">
+        Evaluated on the widely recognized <strong>FaceForensics++ (FF++)</strong> benchmark at the <strong>C23 (high compression)</strong> standard, validating performance under realistic compression conditions encountered on social platforms.
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+        <div style="background: var(--bg-card-solid); border: 1px solid var(--border-subtle); padding: 18px; border-radius: 10px; text-align: center;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: var(--accent-cyan); font-family: var(--font-mono);">24,859</div>
+          <div style="color: var(--text-secondary); font-size: 0.88rem; margin-top: 4px;">Total Test Samples</div>
+        </div>
+        <div style="background: var(--bg-card-solid); border: 1px solid var(--border-subtle); padding: 18px; border-radius: 10px; text-align: center;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: var(--accent-danger); font-family: var(--font-mono);">21,047</div>
+          <div style="color: var(--text-secondary); font-size: 0.88rem; margin-top: 4px;">Manipulated (Fake) Samples</div>
+        </div>
+        <div style="background: var(--bg-card-solid); border: 1px solid var(--border-subtle); padding: 18px; border-radius: 10px; text-align: center;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: var(--accent-teal); font-family: var(--font-mono);">3,812</div>
+          <div style="color: var(--text-secondary); font-size: 0.88rem; margin-top: 4px;">Pristine (Real) Samples</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Confusion Matrix & Classification Report -->
+    <section class="project-detail-section">
+      <div class="project-detail-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        <span>6. Empirical Evaluation & Confusion Matrix Analysis</span>
+      </div>
+
+      <div class="matrix-grid-container" style="margin-bottom: 28px;">
+        <div class="matrix-2x2">
+          <div class="matrix-cell true-fake">
+            <div class="cell-tag">True Fake &rarr; Pred Fake</div>
+            <div class="cell-count">20,815</div>
+            <div class="cell-pct">98.90% True Positive Rate</div>
+          </div>
+          <div class="matrix-cell false-real">
+            <div class="cell-tag">True Fake &rarr; Pred Real</div>
+            <div class="cell-count">232</div>
+            <div class="cell-pct">1.10% False Negative Rate</div>
+          </div>
+          <div class="matrix-cell false-fake">
+            <div class="cell-tag">True Real &rarr; Pred Fake</div>
+            <div class="cell-count">186</div>
+            <div class="cell-pct">4.88% False Alarm Rate</div>
+          </div>
+          <div class="matrix-cell true-real">
+            <div class="cell-tag">True Real &rarr; Pred Real</div>
+            <div class="cell-count">3,626</div>
+            <div class="cell-pct">95.12% True Real Specificity</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Classification Table -->
+      <div class="classification-table-wrapper">
+        <table class="eval-table">
+          <thead>
+            <tr>
+              <th>Class / Metric</th>
+              <th>Precision</th>
+              <th>Recall</th>
+              <th>F1-Score</th>
+              <th>Support</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="class-pill fake">Fake (Class 0)</span></td>
+              <td>99.11%</td>
+              <td>98.90%</td>
+              <td>99.01%</td>
+              <td>21,047</td>
+            </tr>
+            <tr>
+              <td><span class="class-pill real">Real (Class 1)</span></td>
+              <td>93.99%</td>
+              <td>95.12%</td>
+              <td>94.55%</td>
+              <td>3,812</td>
+            </tr>
+            <tr>
+              <td><strong>Macro Average</strong></td>
+              <td>96.55%</td>
+              <td>97.01%</td>
+              <td>96.78%</td>
+              <td>24,859</td>
+            </tr>
+            <tr>
+              <td><strong>Weighted Average</strong></td>
+              <td>98.33%</td>
+              <td>98.32%</td>
+              <td>98.32%</td>
+              <td>24,859</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 7. Screenshot Gallery with Lightbox -->
+    <section class="project-detail-section">
+      <div class="project-detail-section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        <span data-i18n="section_gallery_title">7. Authentic Evidence & System Visualizations</span>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px;" data-i18n="gallery_hint">
+        Click any thumbnail below to inspect the high-resolution evidence in full screen:
+      </p>
+
+      <div class="gallery-grid">
+        <div class="gallery-thumbnail-card" data-lightbox-src="assets/deepvision/Picture100.jpg" data-lightbox-caption="Confusion Matrix — Evaluation on 24,859 Test Samples" data-lightbox-group="dv-detail-gallery">
+          <img src="assets/deepvision/Picture100.jpg" alt="Confusion Matrix" loading="lazy">
+          <div class="thumb-overlay">Confusion Matrix</div>
+        </div>
+        <div class="gallery-thumbnail-card" data-lightbox-src="assets/deepvision/Picture90.jpg" data-lightbox-caption="Detailed Classification Report" data-lightbox-group="dv-detail-gallery">
+          <img src="assets/deepvision/Picture90.jpg" alt="Classification Report" loading="lazy">
+          <div class="thumb-overlay">Classification Report</div>
+        </div>
+        <div class="gallery-thumbnail-card" data-lightbox-src="assets/deepvision/Picture110.png" data-lightbox-caption="DeepVision Web Prediction Dashboard" data-lightbox-group="dv-detail-gallery">
+          <img src="assets/deepvision/Picture110.png" alt="DeepVision Web Dashboard" loading="lazy">
+          <div class="thumb-overlay">Prediction Dashboard</div>
+        </div>
+        <div class="gallery-thumbnail-card" data-lightbox-src="assets/deepvision/Picture80.png" data-lightbox-caption="Drag and Drop Upload Dashboard" data-lightbox-group="dv-detail-gallery">
+          <img src="assets/deepvision/Picture80.png" alt="Media Upload Dashboard" loading="lazy">
+          <div class="thumb-overlay">Media Upload UI</div>
+        </div>
+        <div class="gallery-thumbnail-card" data-lightbox-src="assets/deepvision/Picture70.png" data-lightbox-caption="System Terminal Output & Frame Confidence Log" data-lightbox-group="dv-detail-gallery">
+          <img src="assets/deepvision/Picture70.png" alt="Terminal Output" loading="lazy">
+          <div class="thumb-overlay">Terminal Confidence Log</div>
+        </div>
+        <div class="gallery-thumbnail-card" data-lightbox-src="assets/deepvision/Picture40.png" data-lightbox-caption="PyTorch Channel Attention Code Module" data-lightbox-group="dv-detail-gallery">
+          <img src="assets/deepvision/Picture40.png" alt="Channel Attention PyTorch Code" loading="lazy">
+          <div class="thumb-overlay">PyTorch Channel Attention</div>
+        </div>
+        <div class="gallery-thumbnail-card" data-lightbox-src="assets/deepvision/Picture50.png" data-lightbox-caption="PyTorch Spatial Attention Code Module" data-lightbox-group="dv-detail-gallery">
+          <img src="assets/deepvision/Picture50.png" alt="Spatial Attention PyTorch Code" loading="lazy">
+          <div class="thumb-overlay">PyTorch Spatial Attention</div>
+        </div>
+        <div class="gallery-thumbnail-card" data-lightbox-src="assets/deepvision/Picture10.png" data-lightbox-caption="FaceForensics++ Dataset Directory Architecture" data-lightbox-group="dv-detail-gallery">
+          <img src="assets/deepvision/Picture10.png" alt="FaceForensics Dataset Architecture" loading="lazy">
+          <div class="thumb-overlay">Dataset Directories</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Actions -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 20px;">
+      <a href="projects.html" class="btn btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span data-i18n="btn_back_showcase">Back to Projects Showcase</span>
+      </a>
+      <a href="project-star.html" class="btn btn-primary">
+        <span data-i18n="btn_next_star">Next Project: STAR Company Website &rarr;</span>
+      </a>
+    </div>
+  </main>
+
+  <!-- ==================== ENTERPRISE MEGA FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 14px; text-decoration: none;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <span class="brand-text">Ahmed Adel</span>
+          </a>
+          <p class="footer-bio">
+            Computer Science student at Arab Open University, Cisco CCNA Certified, and DEPI Cybersecurity Fellow. Specializing in SOC operations, threat intelligence, and modern web systems.
+          </p>
+          <div class="footer-status-pill">
+            <span class="pulse-dot"></span>
+            <span>Available for SOC & Security Roles</span>
+          </div>
+          <div class="footer-socials">
+            <a href="https://github.com/CAPO2004" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ahmed-adel-b79410319/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:ahmedadellinkedin2004@gmail.com" class="footer-social-link" aria-label="Direct Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+            <a href="tel:01090204281" class="footer-social-link" aria-label="Phone Contact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_col_nav">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav_about_full">About & Credentials</a></li>
+            <li><a href="projects.html" data-i18n="nav_projects_full">Projects Showcase</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact_full">Services & Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Case Studies -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_col_projects">Case Studies</h4>
+          <ul class="footer-links-list">
+            <li><a href="project-deepvision.html">DeepVision (AI Detection)</a></li>
+            <li><a href="project-star.html">STAR Corporate Portal</a></li>
+            <li><a href="project-store.html">Modern E-Commerce</a></li>
+            <li><a href="project-php.html">PHP Mastery Platform</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Contact -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_col_contact">Direct Contact</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:ahmedadellinkedin2004@gmail.com">ahmedadellinkedin2004@gmail.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:01090204281">+20 109 020 4281</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span data-i18n="footer_location">Menofia, Egypt</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>Arab Open University (AOU)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p data-i18n="copyright">© 2026 Ahmed Adel Saad Obaid. All rights reserved.</p>
+        <p data-i18n="footer_built">Engineered with semantic HTML, CSS, and vanilla JavaScript.</p>
+        <a href="#case-study-hero" id="back-to-top" style="color: var(--accent-cyan); text-decoration: none; font-weight: 600;">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog">
+    <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <div class="lightbox-content-box">
+      <img src="" alt="Evidence Preview" class="lightbox-image" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
